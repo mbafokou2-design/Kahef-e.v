@@ -12,7 +12,6 @@ const Footer = () => {
     { label: t.nav.home, path: "/" },
     { label: t.nav.about, path: "/about" },
     { label: t.nav.activities, path: "/activities" },
-    { label: t.nav.gallery, path: "/gallery" },
     { label: t.nav.contact, path: "/contact" },
   ];
 
@@ -84,11 +83,11 @@ const Footer = () => {
 
 const styles = {
   footer: {
-    backgroundColor: "#f0fafa",
-    color: "#000000",
+    backgroundColor: "#0D2C1D",
+    color: "#FBF7EF",
     fontFamily: "'Segoe UI', sans-serif",
     marginTop: "auto",
-    borderTop: "2px solid #87CEEB",
+    borderTop: "2px solid #C9974A",
   },
   container: {
     maxWidth: "1100px",
@@ -106,15 +105,15 @@ const styles = {
   brand: {
     fontSize: "1.8rem",
     fontWeight: "800",
-    color: "#ffffff",
+    color: "#FBF7EF",
     margin: "0 0 10px",
   },
   accent: {
-    color: "#87CEEB",
+    color: "#C9974A",
   },
   tagline: {
     fontSize: "0.9rem",
-    color: "#aaaaaa",
+    color: "#D8D2C2",
     marginBottom: "20px",
     lineHeight: "1.5",
   },
@@ -123,14 +122,14 @@ const styles = {
     gap: "16px",
   },
   socialIcon: {
-    color: "#87CEEB",
+    color: "#C9974A",
     textDecoration: "none",
     transition: "color 0.2s",
   },
   colTitle: {
     fontSize: "1rem",
     fontWeight: "700",
-    color: "#87CEEB",
+    color: "#C9974A",
     marginBottom: "16px",
     textTransform: "uppercase",
     letterSpacing: "1px",
@@ -144,11 +143,11 @@ const styles = {
     gap: "10px",
   },
   linkItem: {
-    borderBottom: "1px solid #1a1a1a",
+    borderBottom: "1px solid #1A3D2A",
     paddingBottom: "8px",
   },
   link: {
-    color: "#cccccc",
+    color: "#FBF7EF",
     textDecoration: "none",
     fontSize: "0.9rem",
     transition: "color 0.2s",
@@ -159,76 +158,31 @@ const styles = {
     gap: "10px",
     marginBottom: "14px",
     fontSize: "0.9rem",
-    color: "#cccccc",
+    color: "#FBF7EF",
     lineHeight: "1.5",
   },
   contactIcon: {
-    color: "#87CEEB",
+    color: "#C9974A",
     marginTop: "3px",
     minWidth: "16px",
   },
   bottomBar: {
-    borderTop: "1px solid #1f1f1f",
+    borderTop: "1px solid #1A3D2A",
     padding: "16px 20px",
     textAlign: "center",
+    backgroundColor: "#0D2C1D",
   },
   bottomText: {
     fontSize: "0.8rem",
-    color: "#666666",
-    margin: 0,
-  },
-  footer: {
-    backgroundColor: "#f0fafa",
-    color: "#000000",
-    fontFamily: "'Segoe UI', sans-serif",
-    marginTop: "auto",
-    borderTop: "2px solid #87CEEB",
-  },
-  brand: {
-    fontSize: "1.8rem",
-    fontWeight: "800",
-    color: "#000000",
-    margin: "0 0 10px",
-  },
-  tagline: {
-    fontSize: "0.9rem",
-    color: "#444444",
-    marginBottom: "20px",
-    lineHeight: "1.5",
-  },
-  link: {
-    color: "#333333",
-    textDecoration: "none",
-    fontSize: "0.9rem",
-  },
-  linkItem: {
-    borderBottom: "1px solid #d0eeee",
-    paddingBottom: "8px",
-  },
-  contactItem: {
-    display: "flex",
-    alignItems: "flex-start",
-    gap: "10px",
-    marginBottom: "14px",
-    fontSize: "0.9rem",
-    color: "#333333",
-    lineHeight: "1.5",
-  },
-  bottomBar: {
-    borderTop: "1px solid #c0e8e8",
-    padding: "16px 20px",
-    textAlign: "center",
-    backgroundColor: "#e0f4f4",
-  },
-  bottomText: {
-    fontSize: "0.8rem",
-    color: "#333333",
+    color: "#D8D2C2",
     margin: 0,
   },
   footerLogo: {
-    height: "80px",
-    width: "80px",
+    height: "56px",
+    width: "auto",
+    maxWidth: "180px",
     marginBottom: "14px",
+    objectFit: "contain",
   },
 };
 

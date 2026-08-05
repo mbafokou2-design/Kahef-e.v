@@ -42,7 +42,7 @@ const Activities = () => {
           {t.activities.list.map((activity, index) => {
             const CardTag = activity.category ? Link : "div";
             const cardProps = activity.category
-              ? { to: `/gallery?category=${activity.category}` }
+              ? { to: "/activities" }
               : {};
 
             return (
@@ -99,15 +99,15 @@ const Activities = () => {
 
 const styles = {
   pageHeader: {
-    backgroundColor: "#f0fafa",
-    borderBottom: "3px solid #87CEEB",
+    backgroundColor: "#FBF7EF",
+    borderBottom: "3px solid #C9974A",
     padding: "60px 20px 40px",
     textAlign: "center",
   },
   pageTitle: {
     fontSize: "clamp(1.8rem, 4vw, 3rem)",
     fontWeight: "900",
-    color: "#000000",
+    color: "#0D2C1D",
     marginBottom: "16px",
   },
   grid: {
@@ -120,19 +120,19 @@ const styles = {
     alignItems: "flex-start",
     gap: "20px",
     padding: "28px",
-    borderLeft: "4px solid #87CEEB",
+    borderLeft: "4px solid #C9974A",
   },
   iconWrap: {
     minWidth: "52px",
     height: "52px",
-    backgroundColor: "#e8f6fd",
+    backgroundColor: "#FBF7EF",
     borderRadius: "12px",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
   },
   icon: {
-    color: "#87CEEB",
+    color: "#C9974A",
   },
   cardBody: {
     flex: 1,
@@ -140,18 +140,18 @@ const styles = {
   cardTitle: {
     fontSize: "1rem",
     fontWeight: "700",
-    color: "#000000",
+    color: "#14231A",
     marginBottom: "8px",
     lineHeight: "1.4",
   },
   cardDesc: {
     fontSize: "0.9rem",
-    color: "#555555",
+    color: "#5F6B65",
     lineHeight: "1.65",
   },
   banner: {
-    backgroundColor: "#f9f9f9",
-    borderTop: "4px solid #87CEEB",
+    backgroundColor: "#FBF7EF",
+    borderTop: "4px solid #C9974A",
     padding: "50px 20px",
     textAlign: "center",
   },
@@ -162,7 +162,7 @@ const styles = {
   bannerTitle: {
     fontSize: "2rem",
     fontWeight: "800",
-    color: "#000000",
+    color: "#14231A",
     marginBottom: "12px",
   },
 
@@ -173,7 +173,7 @@ bannerRow: {
     alignItems: "center",
     gap: "24px",
     fontSize: "0.95rem",
-    color: "#444444",
+    color: "#5F6B65",
   },
   bannerItem: {
     display: "flex",
@@ -182,7 +182,7 @@ bannerRow: {
     whiteSpace: "nowrap",
   },
   bannerIcon: {
-    color: "#87CEEB",
+    color: "#C9974A",
     fontSize: "0.9rem",
   },
 };

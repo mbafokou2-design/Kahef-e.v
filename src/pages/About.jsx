@@ -37,12 +37,12 @@ const About = () => {
           <div style={styles.textBlock}>
             <h2 style={styles.subTitle}>KAHEF e.V.</h2>
             <p style={styles.bodyText}>{t.about.text}</p>
-            <p style={{ ...styles.bodyText, marginTop: "20px", fontStyle: "italic", color: "#20B2AA" }}>
+            <p style={{ ...styles.bodyText, marginTop: "20px", fontStyle: "italic", color: "#C9974A" }}>
               {t.about.meaning}
             </p>
             <div style={styles.chairmanBox}>
               <div style={styles.chairmanAvatar}>
-                <FontAwesomeIcon icon={faUser} size="lg" style={{ color: "#20B2AA" }} />
+                <FontAwesomeIcon icon={faUser} size="lg" style={{ color: "#C9974A" }} />
               </div>
               <div>
                 <p style={styles.chairmanLabel}>{t.about.chairmanLabel}</p>
@@ -110,15 +110,15 @@ const About = () => {
 
 const styles = {
   pageHeader: {
-    backgroundColor: "#f0fafa",
-    borderBottom: "3px solid #87CEEB",
+    backgroundColor: "#FBF7EF",
+    borderBottom: "3px solid #C9974A",
     padding: "60px 20px 40px",
     textAlign: "center",
   },
   pageTitle: {
     fontSize: "clamp(1.8rem, 4vw, 3rem)",
     fontWeight: "900",
-    color: "#000000",
+    color: "#0D2C1D",
     marginBottom: "16px",
   },
   contentWrap: {
@@ -133,14 +133,14 @@ const styles = {
   subTitle: {
     fontSize: "1.5rem",
     fontWeight: "800",
-    color: "#000000",
+    color: "#0D2C1D",
     marginBottom: "16px",
-    borderLeft: "4px solid #87CEEB",
+    borderLeft: "4px solid #C9974A",
     paddingLeft: "14px",
   },
   bodyText: {
     fontSize: "1rem",
-    color: "#333333",
+    color: "#14231A",
     lineHeight: "1.85",
   },
   infoCard: {
@@ -148,7 +148,7 @@ const styles = {
     backgroundColor: "#f4f4f4",
     borderRadius: "12px",
     padding: "28px",
-    borderTop: "4px solid #87CEEB",
+    borderTop: "4px solid #C9974A",
   },
   infoRow: {
     display: "flex",
@@ -159,17 +159,17 @@ const styles = {
   infoLabel: {
     fontSize: "0.75rem",
     fontWeight: "700",
-    color: "#87CEEB",
+    color: "#C9974A",
     textTransform: "uppercase",
     letterSpacing: "1px",
   },
   infoValue: {
     fontSize: "0.95rem",
-    color: "#000000",
+    color: "#14231A",
     fontWeight: "500",
   },
   focusSection: {
-    backgroundColor: "#f9f9f9",
+    backgroundColor: "#FBF7EF",
   },
   focusCard: {
     textAlign: "center",
@@ -178,7 +178,7 @@ const styles = {
   iconWrap: {
     width: "64px",
     height: "64px",
-    backgroundColor: "#e8f6fd",
+    backgroundColor: "#FBF7EF",
     borderRadius: "50%",
     display: "flex",
     alignItems: "center",
@@ -186,16 +186,16 @@ const styles = {
     margin: "0 auto 20px",
   },
   icon: {
-    color: "#87CEEB",
+    color: "#C9974A",
   },
   focusText: {
     fontSize: "0.95rem",
-    color: "#333333",
+    color: "#14231A",
     lineHeight: "1.6",
     fontWeight: "500",
   },
   missionBanner: {
-    backgroundColor: "#87CEEB",
+    backgroundColor: "#C9974A",
     padding: "60px 20px",
     textAlign: "center",
   },
@@ -206,13 +206,13 @@ const styles = {
   missionQuote: {
     fontSize: "clamp(1.3rem, 3vw, 2rem)",
     fontWeight: "800",
-    color: "#000000",
+    color: "#14231A",
     fontStyle: "italic",
     marginBottom: "12px",
   },
   missionSub: {
     fontSize: "0.9rem",
-    color: "#1a1a1a",
+    color: "#1A3D2A",
     fontWeight: "600",
   },
   chairmanBox: {
@@ -221,15 +221,15 @@ const styles = {
   gap: "16px",
   marginTop: "24px",
   padding: "18px 22px",
-  backgroundColor: "#f0fafa",
+  backgroundColor: "#FBF7EF",
   borderRadius: "12px",
-  borderLeft: "4px solid #20B2AA",
+  borderLeft: "4px solid #C9974A",
 },
 chairmanAvatar: {
   width: "48px",
   height: "48px",
   borderRadius: "50%",
-  backgroundColor: "#e0f4f4",
+  backgroundColor: "#FBF7EF",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -238,14 +238,14 @@ chairmanAvatar: {
 chairmanLabel: {
   fontSize: "0.75rem",
   fontWeight: "700",
-  color: "#20B2AA",
+  color: "#C9974A",
   textTransform: "uppercase",
   letterSpacing: "1px",
 },
 chairmanName: {
   fontSize: "1.05rem",
   fontWeight: "700",
-  color: "#000000",
+  color: "#14231A",
 },
 };
 

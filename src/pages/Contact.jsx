@@ -112,7 +112,7 @@ const Contact = () => {
                 <FontAwesomeIcon
                   icon={faCircleCheck}
                   size="3x"
-                  style={{ color: "#87CEEB", marginBottom: "16px" }}
+                  style={{ color: "#C9974A", marginBottom: "16px" }}
                 />
                 <h3 style={styles.successTitle}>
                   {t.lang === "de"
@@ -211,19 +211,19 @@ const Contact = () => {
 
 const styles = {
   pageHeader: {
-    backgroundColor: "#f0fafa",
-    borderBottom: "3px solid #87CEEB",
+    backgroundColor: "#FBF7EF",
+    borderBottom: "3px solid #C9974A",
     padding: "60px 20px 40px",
     textAlign: "center",
   },
   pageTitle: {
     fontSize: "clamp(1.8rem, 4vw, 3rem)",
     fontWeight: "900",
-    color: "#000000",
+    color: "#0D2C1D",
     marginBottom: "16px",
   },
   pageSubtitle: {
-    color: "#87CEEB",
+    color: "#C9974A",
     fontSize: "1rem",
     marginTop: "8px",
   },
@@ -240,10 +240,10 @@ const styles = {
     gap: "24px",
   },
   infoCard: {
-    backgroundColor: "#f9f9f9",
+    backgroundColor: "#FBF7EF",
     borderRadius: "12px",
     padding: "28px",
-    borderTop: "4px solid #87CEEB",
+    borderTop: "4px solid #C9974A",
   },
   infoItem: {
     display: "flex",
@@ -253,7 +253,7 @@ const styles = {
   infoIconWrap: {
     width: "44px",
     height: "44px",
-    backgroundColor: "#e8f6fd",
+    backgroundColor: "#FBF7EF",
     borderRadius: "10px",
     display: "flex",
     alignItems: "center",
@@ -261,36 +261,36 @@ const styles = {
     minWidth: "44px",
   },
   infoIcon: {
-    color: "#87CEEB",
+    color: "#C9974A",
   },
   infoLabel: {
     fontSize: "0.75rem",
     fontWeight: "700",
-    color: "#87CEEB",
+    color: "#C9974A",
     textTransform: "uppercase",
     letterSpacing: "1px",
     marginBottom: "4px",
   },
   infoValue: {
     fontSize: "0.95rem",
-    color: "#000000",
+    color: "#14231A",
     lineHeight: "1.6",
   },
   infoLink: {
     fontSize: "0.95rem",
-    color: "#000000",
+    color: "#14231A",
     textDecoration: "none",
     fontWeight: "600",
   },
   divider: {
     height: "1px",
-    backgroundColor: "#e0e0e0",
+    backgroundColor: "#D8D2C2",
     margin: "20px 0",
   },
   mapWrap: {
     borderRadius: "10px",
     overflow: "hidden",
-    border: "1px solid #e0e0e0",
+    border: "1px solid #D8D2C2",
   },
   formCol: {
     flex: "2 1 340px",
@@ -308,24 +308,24 @@ const styles = {
   label: {
     fontSize: "0.85rem",
     fontWeight: "700",
-    color: "#000000",
+    color: "#14231A",
     textTransform: "uppercase",
     letterSpacing: "0.5px",
   },
   input: {
     padding: "12px 16px",
     borderRadius: "8px",
-    border: "1.5px solid #e0e0e0",
+    border: "1.5px solid #D8D2C2",
     fontSize: "0.95rem",
-    color: "#000000",
+    color: "#14231A",
     outline: "none",
     fontFamily: "'Segoe UI', sans-serif",
     transition: "border 0.2s",
     backgroundColor: "#ffffff",
   },
   submitBtn: {
-    backgroundColor: "#87CEEB",
-    color: "#000000",
+    backgroundColor: "#C9974A",
+    color: "#FFFFFF",
     border: "none",
     borderRadius: "30px",
     padding: "14px 32px",
@@ -348,7 +348,7 @@ const styles = {
   successBox: {
     textAlign: "center",
     padding: "60px 20px",
-    backgroundColor: "#f9f9f9",
+    backgroundColor: "#FBF7EF",
     borderRadius: "12px",
     display: "flex",
     flexDirection: "column",
@@ -357,17 +357,17 @@ const styles = {
   successTitle: {
     fontSize: "1.5rem",
     fontWeight: "800",
-    color: "#000000",
+    color: "#14231A",
     marginBottom: "10px",
   },
   successSub: {
     fontSize: "0.95rem",
-    color: "#555555",
+    color: "#5F6B65",
     marginBottom: "24px",
   },
   resetBtn: {
-    backgroundColor: "#000000",
-    color: "#ffffff",
+    backgroundColor: "#1A3D2A",
+    color: "#FFFFFF",
     border: "none",
     borderRadius: "30px",
     padding: "12px 28px",
@@ -378,8 +378,8 @@ const styles = {
   donationBox: {
     maxWidth: "700px",
     margin: "50px auto 0",
-    backgroundColor: "#f0fafa",
-    border: "2px solid #87CEEB",
+    backgroundColor: "#FBF7EF",
+    border: "2px solid #C9974A",
     borderRadius: "14px",
     padding: "32px",
   },
@@ -392,11 +392,11 @@ const styles = {
   donationTitle: {
     fontSize: "1.4rem",
     fontWeight: "800",
-    color: "#000000",
+    color: "#14231A",
   },
   donationSubtitle: {
     fontSize: "0.95rem",
-    color: "#20B2AA",
+    color: "#C9974A",
     fontWeight: "700",
     marginBottom: "18px",
   },
@@ -408,13 +408,13 @@ const styles = {
   },
   donationLine: {
     fontSize: "0.9rem",
-    color: "#000000",
+    color: "#14231A",
     lineHeight: "1.9",
     fontFamily: "monospace",
   },
   donationNote: {
     fontSize: "0.85rem",
-    color: "#555555",
+    color: "#5F6B65",
     fontStyle: "italic",
     lineHeight: "1.6",
   },

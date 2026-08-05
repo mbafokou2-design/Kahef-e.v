@@ -14,7 +14,6 @@ const Navbar = () => {
     { label: t.nav.home, path: "/" },
     { label: t.nav.about, path: "/about" },
     { label: t.nav.activities, path: "/activities" },
-    { label: t.nav.gallery, path: "/gallery" },
     { label: t.nav.contact, path: "/contact" },
   ];
 
@@ -53,7 +52,7 @@ const Navbar = () => {
                 style={{
                   ...styles.toggleThumb,
                   transform: lang === "en" ? "translateX(35px)" : "translateX(0px)",
-                  backgroundColor: lang === "en" ? "#20B2AA" : "#87CEEB",
+                  backgroundColor: "#C9974A",
                 }}
               />
               <span style={styles.toggleLabelLeft}>DE</span>
@@ -101,13 +100,13 @@ const Navbar = () => {
 
 const styles = {
   nav: {
-    backgroundColor: "#ffffff",
-    borderBottom: "2px solid #87CEEB",
+    backgroundColor: "#0D2C1D",
+    borderBottom: "2px solid #C9974A",
     position: "sticky",
     top: 0,
     zIndex: 1000,
     fontFamily: "'Segoe UI', sans-serif",
-    boxShadow: "0 2px 12px rgba(135,206,235,0.15)",
+    boxShadow: "0 2px 12px rgba(13, 44, 29, 0.25)",
   },
   container: {
     maxWidth: "1100px",
@@ -120,10 +119,10 @@ const styles = {
   },
   logoLink: { textDecoration: "none", display: "flex", alignItems: "center" },
   logoImage: {
-    width: "100%",
-    height: "48px",
-    objectFit: "cover",
-
+    height: "52px",
+    width: "auto",
+    maxWidth: "180px",
+    objectFit: "contain",
   },
   logoPlaceholder: {
     display: "flex",
@@ -134,14 +133,14 @@ const styles = {
     width: "42px",
     height: "42px",
     borderRadius: "50%",
-    background: "linear-gradient(135deg, #87CEEB 0%, #20B2AA 100%)",
+    background: "linear-gradient(135deg, #C9974A 0%, #A47620 100%)",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    boxShadow: "0 2px 8px rgba(32,178,170,0.35)",
+    boxShadow: "0 2px 8px rgba(201, 151, 74, 0.35)",
   },
   logoCircleInner: {
-    color: "#ffffff",
+    color: "#FFFFFF",
     fontWeight: "900",
     fontSize: "1.2rem",
   },
@@ -153,13 +152,13 @@ const styles = {
   logoMain: {
     fontSize: "1.3rem",
     fontWeight: "900",
-    color: "#000000",
+    color: "#FBF7EF",
     letterSpacing: "2px",
   },
   logoSub: {
     fontSize: "0.7rem",
     fontWeight: "700",
-    color: "#20B2AA",
+    color: "#C9974A",
     letterSpacing: "3px",
   },
   desktopLinks: {
@@ -171,26 +170,25 @@ const styles = {
   },
   link: {
     textDecoration: "none",
-    color: "#000000",
+    color: "#FBF7EF",
     fontWeight: "500",
     fontSize: "0.92rem",
     paddingBottom: "4px",
   },
   activeLink: {
-    color: "#20B2AA",
+    color: "#C9974A",
     fontWeight: "700",
-    borderBottom: "2px solid #20B2AA",
+    borderBottom: "2px solid #C9974A",
   },
   rightSide: {
     display: "flex",
     alignItems: "center",
     gap: "16px",
   },
-  /* Toggle Switch */
   toggleWrap: {
     width: "64px",
     height: "28px",
-    backgroundColor: "#e0f4f4",
+    backgroundColor: "#1A3D2A",
     borderRadius: "14px",
     position: "relative",
     cursor: "pointer",
@@ -198,7 +196,7 @@ const styles = {
     alignItems: "center",
     justifyContent: "space-between",
     padding: "0 4px",
-    border: "1.5px solid #87CEEB",
+    border: "1.5px solid #C9974A",
     userSelect: "none",
   },
   toggleThumb: {
@@ -214,32 +212,30 @@ const styles = {
   toggleLabelLeft: {
     fontSize: "0.65rem",
     fontWeight: "800",
-    color: "#000000",
+    color: "#FBF7EF",
     zIndex: 2,
     letterSpacing: "0.5px",
   },
   toggleLabelRight: {
     fontSize: "0.65rem",
     fontWeight: "800",
-    color: "#000000",
+    color: "#FBF7EF",
     zIndex: 2,
     letterSpacing: "0.5px",
   },
-  /* Hamburger — visible only on mobile via inline media */
   hamburger: {
     background: "none",
     border: "none",
     cursor: "pointer",
-    color: "#000000",
+    color: "#FBF7EF",
     padding: "4px",
-    display: "none", // overridden by CSS in index.css
+    display: "none",
   },
-  /* Mobile Drawer */
   drawer: {
     overflow: "hidden",
     transition: "max-height 0.35s ease, opacity 0.3s ease",
-    backgroundColor: "#ffffff",
-    borderBottom: "2px solid #87CEEB",
+    backgroundColor: "#0D2C1D",
+    borderBottom: "2px solid #C9974A",
     position: "sticky",
     top: "72px",
     zIndex: 999,
@@ -253,18 +249,18 @@ const styles = {
     gap: "4px",
   },
   mobileItem: {
-    borderBottom: "1px solid #f0f0f0",
+    borderBottom: "1px solid #1A3D2A",
   },
   mobileLink: {
     display: "block",
     padding: "13px 4px",
     textDecoration: "none",
-    color: "#000000",
+    color: "#FBF7EF",
     fontWeight: "500",
     fontSize: "1rem",
   },
   activeMobileLink: {
-    color: "#20B2AA",
+    color: "#C9974A",
     fontWeight: "700",
   },
 };

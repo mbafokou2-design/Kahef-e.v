@@ -10,8 +10,8 @@ html {
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #FBF7EF;
+  color: #14231A;
   min-height: 100vh;
 }
 
@@ -66,7 +66,7 @@ img {
 .section-title {
   font-size: 2rem;
   font-weight: 800;
-  color: #000000;
+  color: #0D2C1D;
   margin-bottom: 10px;
   text-align: center;
 }
@@ -74,14 +74,14 @@ img {
 .section-underline {
   width: 60px;
   height: 4px;
-  background-color: #87CEEB;
+  background-color: #C9974A;
   margin: 0 auto 40px;
   border-radius: 2px;
 }
 
 .card {
-  background-color: #ffffff;
-  border: 1px solid #e8e8e8;
+  background-color: #FFFFFF;
+  border: 1px solid #D8D2C2;
   border-radius: 12px;
   padding: 28px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
@@ -89,7 +89,7 @@ img {
 }
 
 .card:hover {
-  box-shadow: 0 6px 24px rgba(135, 206, 235, 0.25);
+  box-shadow: 0 6px 24px rgba(13, 44, 29, 0.12);
 }
 
 .grid-3 {
