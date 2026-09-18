@@ -10,6 +10,7 @@ import {
   faLocationDot,
   faPhone,
   faEnvelope,
+  faUpRightFromSquare,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { useLang } from "../context/LanguageContext";
@@ -29,15 +30,15 @@ const Activities = () => {
   const { t } = useLang();
 
   return (
-    <div>
+    <div className="activities-page">
       {/* Page Header */}
-      <section style={styles.pageHeader}>
+      <section className="pageHeader" style={styles.pageHeader}>
         <h1 style={styles.pageTitle}>{t.activities.title}</h1>
         <div className="section-underline"></div>
       </section>
 
       {/* Activities Grid */}
-      <section className="section">
+      <section className="contentSection section">
         <div style={styles.grid}>
           {t.activities.list.map((activity, index) => {
             const CardTag = activity.category ? Link : "div";
@@ -56,16 +57,19 @@ const Activities = () => {
                 }}
                 {...cardProps}
               >
-                <div style={styles.iconWrap}>
-                  <FontAwesomeIcon
-                    icon={icons[index]}
-                    size="xl"
-                    style={styles.icon}
-                  />
+                <div style={styles.cardTop}>
+                  <span style={styles.number}>{String(index + 1).padStart(2, "0")}</span>
+                  <div style={styles.iconWrap}>
+                    <FontAwesomeIcon icon={icons[index]} size="xl" style={styles.icon} />
+                  </div>
                 </div>
                 <div style={styles.cardBody}>
                   <h3 style={styles.cardTitle}>{activity.title}</h3>
                   <p style={styles.cardDesc}>{activity.desc}</p>
+                </div>
+                <div style={styles.cardFooter}>
+                  <span style={styles.cardLabel}>{t.nav.activities}</span>
+                  {activity.category && <FontAwesomeIcon icon={faUpRightFromSquare} style={styles.cardArrow} />}
                 </div>
               </CardTag>
             );
@@ -74,7 +78,7 @@ const Activities = () => {
       </section>
 
 {/* Bottom Banner */}
-      <section style={styles.banner}>
+      <section className="greenSection" style={styles.banner}>
         <div style={styles.bannerContent}>
           <h2 style={styles.bannerTitle}>{t.activities.joinUs}</h2>
           <div style={styles.bannerRow}>
@@ -99,15 +103,15 @@ const Activities = () => {
 
 const styles = {
   pageHeader: {
-    backgroundColor: "#FBF7EF",
-    borderBottom: "3px solid #C9974A",
+    backgroundColor: "#FFFFFF",
+    borderBottom: "3px solid #0A8F62",
     padding: "60px 20px 40px",
     textAlign: "center",
   },
   pageTitle: {
     fontSize: "clamp(1.8rem, 4vw, 3rem)",
     fontWeight: "900",
-    color: "#0D2C1D",
+    color: "#12372A",
     marginBottom: "16px",
   },
   grid: {
@@ -117,41 +121,74 @@ const styles = {
   },
   card: {
     display: "flex",
-    alignItems: "flex-start",
-    gap: "20px",
+    flexDirection: "column",
+    gap: "22px",
+    minHeight: "280px",
     padding: "28px",
-    borderLeft: "4px solid #C9974A",
+    border: "1px solid #C8DED1",
+    borderTop: "5px solid #0A8F62",
+    borderRadius: "20px",
+    backgroundColor: "#FFFFFF",
+    boxShadow: "0 12px 28px rgba(18, 55, 42, .08)",
+  },
+  cardTop: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+  number: {
+    color: "#0A8F62",
+    fontSize: "0.75rem",
+    fontWeight: "850",
+    letterSpacing: "0.15em",
   },
   iconWrap: {
-    minWidth: "52px",
-    height: "52px",
-    backgroundColor: "#FBF7EF",
-    borderRadius: "12px",
+    width: "58px",
+    height: "58px",
+    backgroundColor: "#EAF4ED",
+    borderRadius: "16px",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
   },
   icon: {
-    color: "#C9974A",
+    color: "#0A8F62",
   },
   cardBody: {
     flex: 1,
   },
   cardTitle: {
-    fontSize: "1rem",
-    fontWeight: "700",
-    color: "#14231A",
-    marginBottom: "8px",
-    lineHeight: "1.4",
+    fontSize: "1.12rem",
+    fontWeight: "800",
+    color: "#12372A",
+    marginBottom: "10px",
+    lineHeight: "1.35",
   },
   cardDesc: {
     fontSize: "0.9rem",
-    color: "#5F6B65",
+    color: "#5B6A62",
     lineHeight: "1.65",
   },
+  cardFooter: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    paddingTop: "16px",
+    borderTop: "1px solid #D9E7DF",
+  },
+  cardLabel: {
+    color: "#08734D",
+    fontSize: "0.72rem",
+    fontWeight: "850",
+    letterSpacing: "0.1em",
+    textTransform: "uppercase",
+  },
+  cardArrow: {
+    color: "#0A8F62",
+  },
   banner: {
-    backgroundColor: "#FBF7EF",
-    borderTop: "4px solid #C9974A",
+    backgroundColor: "#FFFFFF",
+    borderTop: "4px solid #0A8F62",
     padding: "50px 20px",
     textAlign: "center",
   },
@@ -162,7 +199,7 @@ const styles = {
   bannerTitle: {
     fontSize: "2rem",
     fontWeight: "800",
-    color: "#14231A",
+    color: "#1B2922",
     marginBottom: "12px",
   },
 
@@ -173,7 +210,7 @@ bannerRow: {
     alignItems: "center",
     gap: "24px",
     fontSize: "0.95rem",
-    color: "#5F6B65",
+    color: "#5B6A62",
   },
   bannerItem: {
     display: "flex",
@@ -182,7 +219,7 @@ bannerRow: {
     whiteSpace: "nowrap",
   },
   bannerIcon: {
-    color: "#C9974A",
+    color: "#0A8F62",
     fontSize: "0.9rem",
   },
 };

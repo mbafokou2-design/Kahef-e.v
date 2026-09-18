@@ -6,15 +6,15 @@ const Donation = () => {
   const { t } = useLang();
 
   return (
-    <div>
-      <section style={styles.pageHeader}>
-        <FontAwesomeIcon icon={faHandHoldingHeart} size="2x" style={{ color: "#C9974A", marginBottom: "16px" }} />
+    <div className="donation-page">
+      <section className="pageHeader" style={styles.pageHeader}>
+        <FontAwesomeIcon icon={faHandHoldingHeart} size="2x" style={{ color: "#0A8F62", marginBottom: "16px" }} />
         <h1 style={styles.pageTitle}>{t.donation.title}</h1>
         <div className="section-underline"></div>
         <p style={styles.pageSubtitle}>{t.donation.subtitle}</p>
       </section>
 
-      <section className="section">
+      <section className="contentSection section">
         <div style={styles.donationBox}>
           <div style={styles.donationDetails}>
             <p style={styles.donationLine}>{t.donation.iban}</p>
@@ -32,45 +32,45 @@ const Donation = () => {
 
 const styles = {
   pageHeader: {
-    backgroundColor: "#FBF7EF",
-    borderBottom: "3px solid #C9974A",
+    backgroundColor: "#FFFFFF",
+    borderBottom: "3px solid #0A8F62",
     padding: "60px 20px 40px",
     textAlign: "center",
   },
   pageTitle: {
     fontSize: "clamp(1.8rem, 4vw, 3rem)",
     fontWeight: "900",
-    color: "#0D2C1D",
+    color: "#12372A",
     marginBottom: "16px",
   },
   pageSubtitle: {
-    color: "#C9974A",
+    color: "#0A8F62",
     fontSize: "1rem",
     fontWeight: "700",
   },
   donationBox: {
     maxWidth: "600px",
     margin: "0 auto",
-    backgroundColor: "#FBF7EF",
-    border: "2px solid #C9974A",
+    backgroundColor: "#FFFFFF",
+    border: "2px solid #0A8F62",
     borderRadius: "14px",
     padding: "36px",
   },
   donationDetails: {
-    backgroundColor: "#ffffff",
+    backgroundColor: "#EAF4ED",
     borderRadius: "10px",
     padding: "22px 24px",
     marginBottom: "18px",
   },
   donationLine: {
     fontSize: "0.95rem",
-    color: "#14231A",
+    color: "#1B2922",
     lineHeight: "2",
     fontFamily: "monospace",
   },
   donationNote: {
     fontSize: "0.88rem",
-    color: "#5F6B65",
+    color: "#5B6A62",
     fontStyle: "italic",
     lineHeight: "1.6",
     textAlign: "center",

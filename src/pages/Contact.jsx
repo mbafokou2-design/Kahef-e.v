@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useLang } from "../context/LanguageContext";
-import { faLocationDot, faPhone, faEnvelope, faPaperPlane, faCircleCheck } from "@fortawesome/free-solid-svg-icons";
+import { faLocationDot, faPhone, faEnvelope, faPaperPlane, faCircleCheck, faMessage } from "@fortawesome/free-solid-svg-icons";
 
 // Replace with your real Formspree endpoint
 const FORMSPREE_URL = "https://formspree.io/f/YOUR_FORM_ID";
 
 const Contact = () => {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -40,20 +40,20 @@ const Contact = () => {
   };
 
   return (
-    <div>
+    <div className="contact-page">
       {/* Page Header */}
-      <section style={styles.pageHeader}>
+      <section className="pageHeader" style={styles.pageHeader}>
         <h1 style={styles.pageTitle}>{t.contact.title}</h1>
         <div className="section-underline"></div>
         <p style={styles.pageSubtitle}>{t.contact.subtitle}</p>
       </section>
 
       {/* Content */}
-      <section className="section">
+      <section className="contentSection section">
         <div style={styles.wrapper}>
 
           {/* Left — Info */}
-          <div style={styles.infoCol}>
+          <div className="contact-info-column" style={styles.infoCol}>
             <div style={styles.infoCard}>
               <div style={styles.infoItem}>
                 <div style={styles.infoIconWrap}>
@@ -61,8 +61,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p style={styles.infoLabel}>{t.contact.address}</p>
-                  <p style={styles.infoValue}>Bornstraße 61, 44145 Dortmund</p>
-                  <p style={styles.infoValue}>44149 Dortmund</p>
+                  <p style={styles.infoValue}>{t.footer.address}</p>
                 </div>
               </div>
 
@@ -74,8 +73,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <p style={styles.infoLabel}>{t.contact.emailLabel}</p>
-                  <a href="mailto:info@kahef.org" style={styles.infoLink}>
-                    info@kahef.org
+                  <a href="mailto:kahef.do@web.de" style={styles.infoLink}>
+                    kahef.do@web.de
                   </a>
                 </div>
                 <div style={styles.infoIconWrap}>
@@ -83,8 +82,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <p style={styles.infoLabel}>{t.contact.phone}</p>
-                  <a href="tel:+49" style={styles.infoLink}>
-                    +49 (Client to provide)
+                  <a href="tel:+491731486046" style={styles.infoLink}>
+                    +49 173 14 86 046
                   </a>
                 </div>
               </div>
@@ -93,7 +92,7 @@ const Contact = () => {
             {/* Map Embed */}
             <div style={styles.mapWrap}>
               <iframe
-                title="KAHEF e.V. Location"
+                title={t.contact.mapTitle}
                 src="https://www.google.com/maps?q=Bornstra%C3%9Fe+61,+44145+Dortmund&output=embed"
                 width="100%"
                 height="220"
@@ -106,21 +105,29 @@ const Contact = () => {
           </div>
 
           {/* Right — Form */}
-          <div style={styles.formCol}>
+          <div className="contact-form-column" style={styles.formCol}>
+            <div className="contact-form-heading">
+              <div className="contact-form-kicker">
+                <span className="contact-form-kicker-icon"><FontAwesomeIcon icon={faMessage} /></span>
+                <span>{t.contact.emailLabel}</span>
+              </div>
+              <h2>{t.contact.title}</h2>
+              <p>{t.contact.subtitle}</p>
+            </div>
             {status === "success" ? (
               <div style={styles.successBox}>
                 <FontAwesomeIcon
                   icon={faCircleCheck}
                   size="3x"
-                  style={{ color: "#C9974A", marginBottom: "16px" }}
+                  style={{ color: "#0A8F62", marginBottom: "16px" }}
                 />
                 <h3 style={styles.successTitle}>
-                  {t.lang === "de"
+                  {lang === "de"
                     ? "Nachricht gesendet!"
                     : "Message sent!"}
                 </h3>
                 <p style={styles.successSub}>
-                  {t.lang === "de"
+                  {lang === "de"
                     ? "Wir melden uns so schnell wie möglich bei Ihnen."
                     : "We will get back to you as soon as possible."}
                 </p>
@@ -128,13 +135,13 @@ const Contact = () => {
                   style={styles.resetBtn}
                   onClick={() => setStatus("idle")}
                 >
-                  {t.lang === "de" ? "Neue Nachricht" : "New Message"}
+                  {t.contact.newMessage}
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} style={styles.form}>
+              <form onSubmit={handleSubmit} className="contact-form" style={styles.form}>
                 {/* Name */}
-                <div style={styles.fieldGroup}>
+                <div className="contact-field" style={styles.fieldGroup}>
                   <label style={styles.label}>{t.contact.name}</label>
                   <input
                     type="text"
@@ -142,13 +149,14 @@ const Contact = () => {
                     required
                     value={formData.name}
                     onChange={handleChange}
+                    className="contact-input"
                     style={styles.input}
                     placeholder={t.contact.name}
                   />
                 </div>
 
                 {/* Email */}
-                <div style={styles.fieldGroup}>
+                <div className="contact-field" style={styles.fieldGroup}>
                   <label style={styles.label}>{t.contact.email}</label>
                   <input
                     type="email"
@@ -156,13 +164,14 @@ const Contact = () => {
                     required
                     value={formData.email}
                     onChange={handleChange}
+                    className="contact-input"
                     style={styles.input}
                     placeholder={t.contact.email}
                   />
                 </div>
 
                 {/* Message */}
-                <div style={styles.fieldGroup}>
+                <div className="contact-field contact-field-message" style={styles.fieldGroup}>
                   <label style={styles.label}>{t.contact.message}</label>
                   <textarea
                     name="message"
@@ -170,6 +179,7 @@ const Contact = () => {
                     rows={5}
                     value={formData.message}
                     onChange={handleChange}
+                    className="contact-input"
                     style={{ ...styles.input, resize: "vertical" }}
                     placeholder={t.contact.message}
                   />
@@ -178,7 +188,7 @@ const Contact = () => {
                 {/* Error */}
                 {status === "error" && (
                   <p style={styles.errorMsg}>
-                    {t.lang === "de"
+                    {lang === "de"
                       ? "Fehler beim Senden. Bitte versuche es erneut."
                       : "Error sending message. Please try again."}
                   </p>
@@ -187,6 +197,7 @@ const Contact = () => {
                 {/* Submit */}
                 <button
                   type="submit"
+                  className="contact-submit"
                   style={styles.submitBtn}
                   disabled={status === "sending"}
                 >
@@ -194,15 +205,27 @@ const Contact = () => {
                     icon={faPaperPlane}
                     style={{ marginRight: "8px" }}
                   />
-                  {status === "sending"
-                    ? t.lang === "de"
-                      ? "Wird gesendet..."
-                      : "Sending..."
-                    : t.contact.send}
+                  {status === "sending" ? t.contact.sending : t.contact.send}
                 </button>
               </form>
             )}
           </div>
+        </div>
+      </section>
+
+      {/* Impressum */}
+      <section className="section" style={styles.impressumSection}>
+        <div className="contact-impressum" style={styles.impressumBox}>
+          <h2 style={styles.impressumTitle}>{t.contact.impressumTitle}</h2>
+          <p style={styles.impressumLine}>
+            <strong>{t.contact.accountHolder}:</strong> KAHEF - Kamerun Heritage Foundation e.V.
+          </p>
+          <p style={styles.impressumLine}>Bornstraße 61</p>
+          <p style={styles.impressumLine}>44145 Dortmund</p>
+          <p style={styles.impressumLine}>{t.contact.phoneNumber}</p>
+          <p style={styles.impressumLine}>
+            {t.contact.emailShort}: <a href="mailto:kahef.do@web.de" style={styles.infoLink}>kahef.do@web.de</a>
+          </p>
         </div>
       </section>
     </div>
@@ -211,19 +234,19 @@ const Contact = () => {
 
 const styles = {
   pageHeader: {
-    backgroundColor: "#FBF7EF",
-    borderBottom: "3px solid #C9974A",
+    backgroundColor: "#FFFFFF",
+    borderBottom: "3px solid #0A8F62",
     padding: "60px 20px 40px",
     textAlign: "center",
   },
   pageTitle: {
     fontSize: "clamp(1.8rem, 4vw, 3rem)",
     fontWeight: "900",
-    color: "#0D2C1D",
+    color: "#12372A",
     marginBottom: "16px",
   },
   pageSubtitle: {
-    color: "#C9974A",
+    color: "#0A8F62",
     fontSize: "1rem",
     marginTop: "8px",
   },
@@ -240,10 +263,10 @@ const styles = {
     gap: "24px",
   },
   infoCard: {
-    backgroundColor: "#FBF7EF",
+    backgroundColor: "#FFFFFF",
     borderRadius: "12px",
     padding: "28px",
-    borderTop: "4px solid #C9974A",
+    borderTop: "4px solid #0A8F62",
   },
   infoItem: {
     display: "flex",
@@ -253,7 +276,7 @@ const styles = {
   infoIconWrap: {
     width: "44px",
     height: "44px",
-    backgroundColor: "#FBF7EF",
+    backgroundColor: "#FFFFFF",
     borderRadius: "10px",
     display: "flex",
     alignItems: "center",
@@ -261,36 +284,36 @@ const styles = {
     minWidth: "44px",
   },
   infoIcon: {
-    color: "#C9974A",
+    color: "#0A8F62",
   },
   infoLabel: {
     fontSize: "0.75rem",
     fontWeight: "700",
-    color: "#C9974A",
+    color: "#0A8F62",
     textTransform: "uppercase",
     letterSpacing: "1px",
     marginBottom: "4px",
   },
   infoValue: {
     fontSize: "0.95rem",
-    color: "#14231A",
+    color: "#1B2922",
     lineHeight: "1.6",
   },
   infoLink: {
     fontSize: "0.95rem",
-    color: "#14231A",
+    color: "#1B2922",
     textDecoration: "none",
     fontWeight: "600",
   },
   divider: {
     height: "1px",
-    backgroundColor: "#D8D2C2",
+    backgroundColor: "#C8DED1",
     margin: "20px 0",
   },
   mapWrap: {
     borderRadius: "10px",
     overflow: "hidden",
-    border: "1px solid #D8D2C2",
+    border: "1px solid #C8DED1",
   },
   formCol: {
     flex: "2 1 340px",
@@ -308,23 +331,23 @@ const styles = {
   label: {
     fontSize: "0.85rem",
     fontWeight: "700",
-    color: "#14231A",
+    color: "#1B2922",
     textTransform: "uppercase",
     letterSpacing: "0.5px",
   },
   input: {
     padding: "12px 16px",
     borderRadius: "8px",
-    border: "1.5px solid #D8D2C2",
+    border: "1.5px solid #C8DED1",
     fontSize: "0.95rem",
-    color: "#14231A",
+    color: "#1B2922",
     outline: "none",
     fontFamily: "'Segoe UI', sans-serif",
     transition: "border 0.2s",
-    backgroundColor: "#ffffff",
+    backgroundColor: "#EAF4ED",
   },
   submitBtn: {
-    backgroundColor: "#C9974A",
+    backgroundColor: "#0A8F62",
     color: "#FFFFFF",
     border: "none",
     borderRadius: "30px",
@@ -348,7 +371,7 @@ const styles = {
   successBox: {
     textAlign: "center",
     padding: "60px 20px",
-    backgroundColor: "#FBF7EF",
+    backgroundColor: "#FFFFFF",
     borderRadius: "12px",
     display: "flex",
     flexDirection: "column",
@@ -357,16 +380,16 @@ const styles = {
   successTitle: {
     fontSize: "1.5rem",
     fontWeight: "800",
-    color: "#14231A",
+    color: "#1B2922",
     marginBottom: "10px",
   },
   successSub: {
     fontSize: "0.95rem",
-    color: "#5F6B65",
+    color: "#5B6A62",
     marginBottom: "24px",
   },
   resetBtn: {
-    backgroundColor: "#1A3D2A",
+    backgroundColor: "#0E5A3C",
     color: "#FFFFFF",
     border: "none",
     borderRadius: "30px",
@@ -378,10 +401,33 @@ const styles = {
   donationBox: {
     maxWidth: "700px",
     margin: "50px auto 0",
-    backgroundColor: "#FBF7EF",
-    border: "2px solid #C9974A",
+    backgroundColor: "#FFFFFF",
+    border: "2px solid #0A8F62",
     borderRadius: "14px",
     padding: "32px",
+  },
+  impressumSection: {
+    paddingTop: "0",
+  },
+  impressumBox: {
+    maxWidth: "700px",
+    margin: "0 auto",
+    padding: "28px",
+    backgroundColor: "#F4FAF6",
+    borderTop: "4px solid #0A8F62",
+    borderRadius: "12px",
+    boxShadow: "0 2px 12px rgba(0, 0, 0, 0.06)",
+  },
+  impressumTitle: {
+    color: "#12372A",
+    fontSize: "1.3rem",
+    fontWeight: "800",
+    marginBottom: "16px",
+  },
+  impressumLine: {
+    color: "#1B2922",
+    fontSize: "0.95rem",
+    lineHeight: "1.7",
   },
   donationHeader: {
     display: "flex",
@@ -392,29 +438,29 @@ const styles = {
   donationTitle: {
     fontSize: "1.4rem",
     fontWeight: "800",
-    color: "#14231A",
+    color: "#1B2922",
   },
   donationSubtitle: {
     fontSize: "0.95rem",
-    color: "#C9974A",
+    color: "#0A8F62",
     fontWeight: "700",
     marginBottom: "18px",
   },
   donationDetails: {
-    backgroundColor: "#ffffff",
+    backgroundColor: "#EAF4ED",
     borderRadius: "10px",
     padding: "18px 20px",
     marginBottom: "16px",
   },
   donationLine: {
     fontSize: "0.9rem",
-    color: "#14231A",
+    color: "#1B2922",
     lineHeight: "1.9",
     fontFamily: "monospace",
   },
   donationNote: {
     fontSize: "0.85rem",
-    color: "#5F6B65",
+    color: "#5B6A62",
     fontStyle: "italic",
     lineHeight: "1.6",
   },

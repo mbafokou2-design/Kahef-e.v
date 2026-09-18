@@ -10,22 +10,22 @@ import {
   faHandHoldingHeart,
 } from "@fortawesome/free-solid-svg-icons";
 import { useLang } from "../context/LanguageContext";
-import heroLogo from "../assets/images/logo.png";
+const heroLogo = "/logo.png";
 
 const Home = () => {
   const { t } = useLang();
 
   return (
-    <div>
+    <div className="home-page">
       {/* Hero Section */}
-      <section style={styles.hero}>
+      <section className="homeHero" style={styles.hero}>
         <div style={styles.heroOverlay} className="hero-overlay">
           {/* Left — Text */}
           <div style={styles.heroContent}>
-            <p style={styles.heroEyebrow}>KAHEF e.V. — Dortmund</p>
+            <p style={styles.heroEyebrow}>{t.home.location}</p>
             <h1 style={styles.heroTitle}>{t.home.slogan}</h1>
             <p style={styles.heroIntro}>{t.home.intro}</p>
-            <p style={{ ...styles.heroIntro, fontStyle: "italic", color: "#C9974A", fontSize: "0.95rem" }}>
+            <p style={{ ...styles.heroIntro, fontStyle: "italic", color: "#0A8F62", fontSize: "0.95rem" }}>
               {t.about.meaning}
             </p>
             <div style={{ display: "flex", gap: "14px", flexWrap: "wrap" }}>
@@ -47,7 +47,7 @@ const Home = () => {
       </section>
 
       {/* Focus Areas */}
-      <section style={styles.focusSection}>
+      <section className="greenSection" style={styles.focusSection}>
         <div className="section">
           <h2 className="section-title">{t.about.focusTitle}</h2>
           <div className="section-underline"></div>
@@ -81,7 +81,7 @@ const Home = () => {
       </section>
 
       {/* Activities Preview */}
-      <section style={styles.activitiesPreview}>
+      <section className="activitiesSection" style={styles.activitiesPreview}>
         <div className="section">
           <h2 className="section-title">{t.activities.title}</h2>
           <div className="section-underline"></div>
@@ -112,7 +112,7 @@ const styles = {
   hero: {
     width: "100%",
     minHeight: "70vh",
-    background: "linear-gradient(160deg, #FBF7EF 0%, #FFFFFF 55%, #FBF7EF 100%)",
+    background: "linear-gradient(160deg, #EAF4ED 0%, #FFFFFF 55%, #DDEFE5 100%)",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -132,7 +132,7 @@ const styles = {
     alignItems: "flex-start",
   },
   heroEyebrow: {
-    color: "#C9974A",
+    color: "#0A8F62",
     fontWeight: "700",
     fontSize: "0.9rem",
     letterSpacing: "2px",
@@ -141,20 +141,20 @@ const styles = {
   heroTitle: {
     fontSize: "clamp(2rem, 5vw, 3.5rem)",
     fontWeight: "900",
-    color: "#0D2C1D",
+    color: "#12372A",
     lineHeight: "1.15",
     marginBottom: "24px",
   },
   heroIntro: {
     fontSize: "1.05rem",
-    color: "#14231A",
+    color: "#1B2922",
     lineHeight: "1.75",
     marginBottom: "24px",
     maxWidth: "560px",
   },
   heroBtn: {
     display: "inline-block",
-    backgroundColor: "#C9974A",
+    backgroundColor: "#0A8F62",
     color: "#FFFFFF",
     padding: "14px 32px",
     borderRadius: "30px",
@@ -174,33 +174,36 @@ const styles = {
     objectFit: "contain",
   },
   focusSection: {
-    backgroundColor: "#FBF7EF",
+    backgroundColor: "#FFFFFF",
   },
   focusCard: {
     textAlign: "center",
     padding: "36px 24px",
   },
   icon: {
-    color: "#C9974A",
+    color: "#0A8F62",
     marginBottom: "16px",
   },
   cardTitle: {
     fontSize: "1rem",
     fontWeight: "600",
-    color: "#0D2C1D",
+    color: "#12372A",
     lineHeight: "1.5",
   },
   activitiesPreview: {
-    backgroundColor: "#FFFFFF",
+    backgroundColor: "#DDEFE5",
   },
   activityCard: {
-    borderLeft: "4px solid #C9974A",
-    borderRadius: "8px",
+    borderLeft: "6px solid #0A8F62",
+    borderRadius: "18px",
+    backgroundColor: "#F4FAF6",
+    boxShadow: "0 14px 28px rgba(18, 55, 42, 0.10)",
+    padding: "30px",
   },
   activityTitle: {
     fontSize: "1rem",
     fontWeight: "700",
-    color: "#0D2C1D",
+    color: "#12372A",
     marginBottom: "8px",
   },
   ctaWrap: {
@@ -209,8 +212,8 @@ const styles = {
   },
   outlineBtn: {
     display: "inline-block",
-    border: "2px solid #1A3D2A",
-    color: "#1A3D2A",
+    border: "2px solid #0E5A3C",
+    color: "#0E5A3C",
     padding: "12px 28px",
     borderRadius: "30px",
     fontWeight: "700",
@@ -220,9 +223,9 @@ const styles = {
   donationBtn: {
     display: "inline-flex",
     alignItems: "center",
-    backgroundColor: "#FFFFFF",
-    color: "#C9974A",
-    border: "2px solid #C9974A",
+    backgroundColor: "#EAF4ED",
+    color: "#0A8F62",
+    border: "2px solid #0A8F62",
     padding: "14px 28px",
     borderRadius: "30px",
     fontWeight: "700",
