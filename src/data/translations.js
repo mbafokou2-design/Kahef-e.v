@@ -21,12 +21,12 @@ const translations = {
       missionSub: "— KAHEF e.V., Dortmund",
       slogan: "Together for Integration and Cohesion",
       intro:
-        "KAHEF – Kamerun Heritage Foundation Dortmund e.V. is a registered nonprofit association founded jointly by Cameroonian citizens in Dortmund. We advise and accompany migrants and refugees from Sub-Saharan Africa, promote intercultural coexistence, and strengthen relations between Germany and Cameroon.",
+        "KAHEF – Kamerun Heritage Foundation Dortmund e.V. is a registered nonprofit association founded jointly by Cameroonian citizens in Dortmund. We advise and accompany migrants and refugees from Sub-Saharan Africa in integrating into everyday life, strengthening social participation, and creating a supportive community.",
       cta: "Learn More About Us",
     },
     about: {
       title: "About Us",
-      text: "KAHEF – Kamerun Heritage Foundation Dortmund e.V. is a registered nonprofit association founded jointly by Cameroonian citizens in Dortmund. The focus of our work is personal advice, care, and accompaniment of migrants and refugees from Sub-Saharan Africa in managing everyday life, as well as promoting solidary coexistence of people from different cultures.",
+      text: "KAHEF – Kamerun Heritage Foundation Dortmund e.V. is a registered nonprofit association founded jointly by Cameroonian citizens in Dortmund. The focus of our work is personal advice, care, and social support for migrants and refugees from across Africa, with an emphasis on integration, family well-being, and community cohesion.",
       meaning:
         "We promote family and parent work, human rights and equal opportunities for disadvantaged groups, and development cooperation and international relations between Germany and Cameroon.",
       focusTitle: "Our Focus Areas",
@@ -66,14 +66,17 @@ const translations = {
         {
           title: "Human rights and equal opportunities",
           desc: "Promoting human rights and equal opportunities for disadvantaged groups.",
+          category: "community",
         },
         {
           title: "Community engagement",
-          desc: "Client content required – additional activity details.",
+          desc: "Volunteer activities and local initiatives that strengthen participation, social responsibility, and solidarity.",
+          category: "community",
         },
         {
           title: "Partnerships",
-          desc: "Client content required – partnership activities.",
+          desc: "Collaborations with institutions and organizations that expand support, visibility, and opportunities for our community.",
+          category: "partnership",
         },
       ],
       featured: [
@@ -115,7 +118,7 @@ const translations = {
       vicePresidentLabel: "Vice President",
       secretaryGeneralLabel: "Secretary General",
       presidentName: "Karlmax Boma",
-      vicePresidentName: "Celestine Njumbe",
+      vicePresidentName: "Derick Ndeh",
       secretaryGeneralName: "Kevin Ndeme Matuke",
       chair: "Chair",
       viceChair: "Vice Chair",
@@ -181,12 +184,12 @@ const translations = {
       missionSub: "— KAHEF e.V., Dortmund",
       slogan: "Gemeinsam für Integration und Zusammenhalt",
       intro:
-        "KAHEF – Kamerun Heritage Foundation Dortmund e.V. ist ein eingetragener gemeinnütziger Verein, der gemeinsam von kamerunischen Mitbürgern in Dortmund gegründet wurde. Wir beraten und begleiten Migranten und Geflüchtete aus Sub-Sahara Afrika, fördern interkulturelles Zusammenleben und stärken die Beziehungen zwischen Deutschland und Kamerun.",
+        "KAHEF – Kamerun Heritage Foundation Dortmund e.V. ist ein eingetragener gemeinnütziger Verein, der gemeinsam von kamerunischen Mitbürgern in Dortmund gegründet wurde. Wir beraten und begleiten Migrantinnen und Migranten sowie Geflüchtete bei der Integration in den Alltag und stärken die gesellschaftliche Teilhabe.",
       cta: "Mehr über uns erfahren",
     },
     about: {
       title: "Über uns",
-      text: "KAHEF – Kamerun Heritage Foundation Dortmund e.V. ist ein eingetragener gemeinnütziger Verein, der gemeinsam von kamerunischen Mitbürgern in Dortmund gegründet wurde. Der Schwerpunkt unserer Arbeit ist die persönliche Beratung, Betreuung und Begleitung der Migranten und Geflüchteten aus Sub-Sahara Afrika bei der Bewältigung ihres Alltags sowie die Förderung des solidarischen Zusammenlebens von Menschen aus verschiedenen Kulturen.",
+      text: "KAHEF – Kamerun Heritage Foundation Dortmund e.V. ist ein eingetragener gemeinnütziger Verein, der gemeinsam von kamerunischen Mitbürgern in Dortmund gegründet wurde. Der Schwerpunkt unserer Arbeit liegt auf persönlicher Beratung, Begleitung und sozialer Unterstützung für Migrantinnen, Geflüchtete und Familien.",
       meaning:
         "Wir fördern Familien- und Elternarbeit, Menschenrechte und Chancengleichheit für benachteiligte Gruppen sowie die Entwicklungszusammenarbeit und internationalen Beziehungen zwischen Deutschland und Kamerun.",
       focusTitle: "Unsere Schwerpunkte",
@@ -226,14 +229,17 @@ const translations = {
         {
           title: "Menschenrechte und Chancengleichheit",
           desc: "Förderung der Menschenrechte und Chancengleichheit für benachteiligte Gruppen.",
+          category: "community",
         },
         {
           title: "Gemeinschaftliches Engagement",
-          desc: "Client content required – weitere Aktivitätsdetails.",
+          desc: "Ehrenamtliche Aktivitäten und lokale Initiativen, die Teilhabe, Verantwortung und Solidarität stärken.",
+          category: "community",
         },
         {
           title: "Partnerschaften",
-          desc: "Client content required – Partnerschaftsaktivitäten.",
+          desc: "Zusammenarbeit mit Institutionen und Organisationen, die Unterstützung, Sichtbarkeit und Chancen für unsere Gemeinschaft erweitern.",
+          category: "partnership",
         },
       ],
       featured: [
@@ -275,7 +281,7 @@ const translations = {
       vicePresidentLabel: "Stellvertretender Vorsitzender",
       secretaryGeneralLabel: "Generalsekretär",
       presidentName: "Karlmax Boma",
-      vicePresidentName: "Celestine Njumbe",
+      vicePresidentName: "Derick Ndeh",
       secretaryGeneralName: "Kevin Ndeme Matuke",
       chair: "Vorsitzender",
       viceChair: "Stellvertretende Vorsitzende",
